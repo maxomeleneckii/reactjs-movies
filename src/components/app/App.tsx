@@ -1,5 +1,11 @@
+import { Main } from '../../pages/main/Main';
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <Main />
+    </>
+  );
 }
 
 export default App;

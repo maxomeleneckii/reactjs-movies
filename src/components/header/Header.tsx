@@ -1,39 +1,51 @@
-import { IconButton, InputBase, Typography } from '@mui/material';
-import styled from 'styled-components';
+import React from 'react';
+import { Button, IconButton, InputBase, List, MenuItem, Typography } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-
-export const HeaderWrapper = styled.header`
-  display: flex;
-`;
-
-export const Logo = styled.h1``;
-
-export const Search = styled.form`
-  padding: 2px 4px;
-  display: flex;
-  align-items: center;
-  width: 400;
-`;
+import {
+  HeaderWrapper,
+  LanguageBtnWrapper,
+  LanguagesListWrapper,
+  Logo,
+  Search,
+  styles,
+} from './Header.styles';
 
 export const Header = () => {
+  const [activeLangList, setActiveLangList] = React.useState(false);
+
+  const onClickLangBtn = () => {
+    setActiveLangList(!activeLangList ? true : false);
+  };
+
+  const onClickLangClose = (event: React.MouseEvent<HTMLInputElement>) => {
+    setActiveLangList(event.currentTarget.name !== 'list-lang' ? false : true);
+  };
+
   return (
     <>
       <HeaderWrapper>
         <Logo>
-          <Typography variant="h6" noWrap component="a" href="/">
+          <Typography sx={styles.headerLogo} variant="h6" noWrap component="a" href="/">
             MOVIES
           </Typography>
         </Logo>
         <Search>
-          <InputBase
-            sx={{ ml: 1, flex: 1 }}
-            placeholder="Movies, person, movie theaters"
-            inputProps={{ 'aria-label': 'movies, person, movie theaters' }}
-          />
-          <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
-            <SearchIcon />
+          <InputBase sx={styles.headerSearch} placeholder="Movies, person, movie theaters" />
+          <IconButton sx={styles.headerSearchBtn} type="button" aria-label="search">
+            <SearchIcon sx={styles.headerSearchIcon} />
           </IconButton>
         </Search>
+        <LanguageBtnWrapper>
+          <Button name="btn-lang" onClick={onClickLangBtn} sx={styles.headerLangBtn}>
+            EN
+          </Button>
+          <LanguagesListWrapper name="list-lang" langListActive={activeLangList}>
+            <List>
+              <MenuItem sx={styles.headerLangListItem}>RU</MenuItem>
+              <MenuItem sx={styles.headerLangListItem}>EN</MenuItem>
+            </List>
+          </LanguagesListWrapper>
+        </LanguageBtnWrapper>
       </HeaderWrapper>
     </>
   );

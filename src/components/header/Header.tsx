@@ -1,11 +1,12 @@
 import React from 'react';
-import { Button, IconButton, InputBase, List, MenuItem, Typography } from '@mui/material';
+import { Box, Button, IconButton, InputBase, List, Typography } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import {
   HeaderWrapper,
   LanguageBtnWrapper,
   LanguagesListWrapper,
   Logo,
+  Overlay,
   Search,
   styles,
 } from './Header.styles';
@@ -13,12 +14,12 @@ import {
 export const Header = () => {
   const [activeLangList, setActiveLangList] = React.useState(false);
 
-  const onClickLangBtn = () => {
+  const openLangList = () => {
     setActiveLangList(!activeLangList ? true : false);
   };
 
-  const onClickLangClose = (event: React.MouseEvent<HTMLInputElement>) => {
-    setActiveLangList(event.currentTarget.name !== 'list-lang' ? false : true);
+  const closeLangList = (event: React.MouseEvent<HTMLInputElement>) => {
+    setActiveLangList(event.currentTarget.name !== 'list-lang-item' ? false : true);
   };
 
   return (
@@ -29,23 +30,30 @@ export const Header = () => {
             MOVIES
           </Typography>
         </Logo>
-        <Search>
-          <InputBase sx={styles.headerSearch} placeholder="Movies, person, movie theaters" />
-          <IconButton sx={styles.headerSearchBtn} type="button" aria-label="search">
-            <SearchIcon sx={styles.headerSearchIcon} />
-          </IconButton>
-        </Search>
-        <LanguageBtnWrapper>
-          <Button name="btn-lang" onClick={onClickLangBtn} sx={styles.headerLangBtn}>
-            EN
-          </Button>
-          <LanguagesListWrapper name="list-lang" langListActive={activeLangList}>
-            <List>
-              <MenuItem sx={styles.headerLangListItem}>RU</MenuItem>
-              <MenuItem sx={styles.headerLangListItem}>EN</MenuItem>
-            </List>
-          </LanguagesListWrapper>
-        </LanguageBtnWrapper>
+        <Box sx={styles.headerSearchLangWrapper}>
+          <Search>
+            <InputBase sx={styles.headerSearch} placeholder="Movies, person, movie theaters" />
+            <IconButton sx={styles.headerSearchBtn} type="button" aria-label="search">
+              <SearchIcon sx={styles.headerSearchIcon} />
+            </IconButton>
+          </Search>
+          <LanguageBtnWrapper>
+            <Button name="btn-lang" onClick={openLangList} sx={styles.headerLangBtn}>
+              EN
+            </Button>
+            <LanguagesListWrapper langList={activeLangList}>
+              <List>
+                <Button name="list-lang-item" value="RU" sx={styles.headerLangListItem}>
+                  RU
+                </Button>
+                <Button name="list-lang-item" value="EN" sx={styles.headerLangListItem}>
+                  EN
+                </Button>
+              </List>
+            </LanguagesListWrapper>
+          </LanguageBtnWrapper>
+        </Box>
+        <Overlay onClick={closeLangList} overlay={activeLangList} />
       </HeaderWrapper>
     </>
   );

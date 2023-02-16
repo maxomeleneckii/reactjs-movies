@@ -24,6 +24,7 @@ export const styles = {
     lineHeight: 0,
     width: '100%',
     height: '100%',
+    zIndex: 3,
   },
   headerLangListItem: {
     color: '#000',
@@ -31,6 +32,14 @@ export const styles = {
     minHeight: 'auto',
     paddingTop: 0,
     paddingBottom: '0.25rem',
+  },
+  headerSearchLangWrapper: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
+    columnGap: '0.625rem',
+    maxWidth: '44.375rem',
   },
 };
 
@@ -40,6 +49,9 @@ export const HeaderWrapper = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 0.625rem 0;
+  @media (max-width: 544px) {
+    flex-wrap: wrap;
+  }
 `;
 
 export const Logo = styled.h1``;
@@ -67,14 +79,15 @@ export const LanguageBtnWrapper = styled.div`
   border-radius: 0.1875rem;
 `;
 
-export const LanguagesListWrapper = styled.div<{ langListActive: boolean; name: string }>`
+export const LanguagesListWrapper = styled.div<{ langList: boolean }>`
   position: absolute;
   bottom: -370%;
   width: 3.75rem;
   background: white;
   border-bottom-right-radius: 0.1875rem;
   border-bottom-left-radius: 0.1875rem;
-  display: ${(props) => (props.langListActive ? 'block' : 'none')};
+  display: ${(props) => (props.langList ? 'block' : 'none')};
+  z-index: 3;
   &:before {
     content: '';
     display: block;
@@ -87,4 +100,15 @@ export const LanguagesListWrapper = styled.div<{ langListActive: boolean; name: 
     transform: translateY(-50%) rotate(45deg);
     z-index: 0;
   }
+`;
+
+export const Overlay = styled.div<{ overlay: boolean }>`
+  display: ${(props) => (props.overlay ? 'block' : 'none')};
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 2;
 `;

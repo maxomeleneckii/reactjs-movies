@@ -18,12 +18,17 @@
 }
 html,
 body {
-  font-family: "Roboto", sans-serif;
   height: 100%;
   width: 100%;
+}
+body {
+  font-family: "Roboto", sans-serif;
   color: #fff;
   background: #1f1f1f;
-  padding: 0 40px;
+  padding: 0 2.5rem;
+  @media (max-width: 544px) {
+    padding: 0 0.9375rem;
+  }
 }
 input,
 button,

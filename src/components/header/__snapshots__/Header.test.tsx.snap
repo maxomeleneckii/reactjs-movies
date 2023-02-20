@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render header 1`] = `
+<header
+  className="sc-bcXHqe jnupvJ"
+>
+  <h1
+    className="sc-gswNZR"
+  >
+    <a
+      className="MuiTypography-root MuiTypography-h6 MuiTypography-noWrap css-8qzzrd-MuiTypography-root"
+      href="/"
+    >
+      MOVIES
+    </a>
+  </h1>
+  <div
+    className="MuiBox-root css-18q3rky"
+  >
+    <form
+      className="sc-dkrFOg jInVTs"
+    >
+      <div
+        className="MuiInputBase-root MuiInputBase-colorPrimary css-z754pm-MuiInputBase-root"
+        onClick={[Function]}
+      >
+        <input
+          className="MuiInputBase-input css-yz9k0d-MuiInputBase-input"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder="Movies, person, movie theaters"
+          type="text"
+        />
+      </div>
+      <button
+        aria-label="search"
+        className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-4xz8gl-MuiButtonBase-root-MuiIconButton-root"
+        disabled={false}
+        onBlur={[Function]}
+        onContextMenu={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
+      >
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1hjwbh6-MuiSvgIcon-root"
+          data-testid="SearchIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+          />
+        </svg>
+      </button>
+    </form>
+    <div
+      className="sc-hLBbgP RGMjo"
+    >
+      <button
+        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-gb2ieo-MuiButtonBase-root-MuiButton-root"
+        disabled={false}
+        name="btn-lang"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onContextMenu={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
+      >
+        EN
+      </button>
+      <div
+        className="sc-eDvSVe sgTij"
+      >
+        <ul
+          className="MuiList-root MuiList-padding css-h4y409-MuiList-root"
+        >
+          <button
+            className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1jx1s2u-MuiButtonBase-root-MuiButton-root"
+            disabled={false}
+            name="list-lang-item"
+            onBlur={[Function]}
+            onContextMenu={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+            value="RU"
+          >
+            RU
+          </button>
+          <button
+            className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1jx1s2u-MuiButtonBase-root-MuiButton-root"
+            disabled={false}
+            name="list-lang-item"
+            onBlur={[Function]}
+            onContextMenu={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="button"
+            value="EN"
+          >
+            EN
+          </button>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-jSUZER coZnNz"
+    onClick={[Function]}
+  />
+</header>
+`;

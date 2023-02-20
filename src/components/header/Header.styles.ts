@@ -54,9 +54,9 @@ export const HeaderWrapper = styled.header`
   }
 `;
 
-export const Logo = styled.h1``;
+export const Heading = styled.h1``;
 
-export const Search = styled.form`
+export const SearchForm = styled.form`
   padding: 0.125rem 0.25rem;
   display: flex;
   align-items: center;

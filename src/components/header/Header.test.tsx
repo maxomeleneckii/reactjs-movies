@@ -11,6 +11,7 @@ it('Render header', () => {
 
 it('Checking the address of the link on the logo', () => {
   render(<Logo />);
-  userEvent.click(screen.getByText(/movies/i));
-  expect(screen.getByRole('link', { name: /movies/i })).toHaveAttribute('href', '/');
+  const linkLogo = screen.getByRole('link', { name: /movies/i });
+  userEvent.click(linkLogo);
+  expect(linkLogo).toHaveAttribute('href', '/');
 });
